@@ -1,12 +1,11 @@
-<form action='index.php' method='post'></form>
-<table width="400" border="0" align="center" cellpadding="3" cellspacing="0">
+<table border="0" align="center" cellpadding="3" cellspacing="0">
     <tr>
         <td><strong> Guest Book </strong></td>
     </tr>
 </table>
 <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+    <form id="form1" name="form1" method="post" action="index.php">
     <tr>
-        <form id="form1" name="form1" method="post" action="index.php">
             <td>
                 <table width="550" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
                     <tr>
@@ -43,7 +42,7 @@
         </form>
     </tr>
 </table>
-<table width="500" border="0" align="center" cellpadding="3" cellspacing="0">
+<table border="0" align="center" cellpadding="3" cellspacing="0">
     <tr>
 
         <td><strong><a href="listguestbook.php">Guest Book Listing</a> </strong></td>
