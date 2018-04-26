@@ -4,29 +4,29 @@
     </tr>
 </table>
 <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
-    <form id="form1" name="form1" method="post" action="index.php">
     <tr>
+        <form id="form1" name="form1" method="post" action="index.php">
             <td>
                 <table width="550" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
                     <tr>
                         <td width="110">Guest Book ID</td>
                         <td width="15">:</td>
-                        <td width="350"><input name="gid" type="text" id="id" size="40" required/></td>
+                        <td width="350"><input name="gid" type="text" pattern="[0-9]{0,}" id="id" size="40" required/></td>
                     </tr>
                     <tr>
                         <td width="110">Name</td>
                         <td width="15">:</td>
-                        <td width="350"><input name="name" type="text" id="name" size="40" required/></td>
+                        <td width="350"><input name="name" type="text" pattern="[a-z A-Z]{0,}" id="name" size="40" required/></td>
                     </tr>
                     <tr>
                         <td>Email</td>
                         <td>:</td>
-                        <td><input name="email" type="text" id="email" size="40" required/></td>
+                        <td><input name="email" type="email" id="email" size="40" required/></td>
                     </tr>
                     <tr>
                         <td>Phone</td>
                         <td>:</td>
-                        <td><input name="phone" type="text" id="phone" size="40" required/></td>
+                        <td><input name="phone" type="text" pattern="[0-9]{0,}" id="phone" size="40" required/></td>
                     </tr>                    <tr>
                         <td valign="top">Comment</td>
                         <td valign="top">:</td>
@@ -51,7 +51,7 @@
 
 <?php
 
-/* Create connection <td><strong><a href="listguestbook.php?gid=<?php echo $guestid; ?>">Guest Book Listing</a> </strong></td> */
+/* Create connection */
 $conn = mysqli_connect('localhost','root','root','Guest_Book');
 // Check connection
 if (!$conn) {
